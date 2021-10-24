@@ -21,6 +21,6 @@ color (option 1)
 ![gray result](result/result_bw.jpg?raw=true "gray result")
 
 # Next steps
-Adding video and gif support
-Improving the color effect
-Aiming for something like [this](https://youtu.be/tDU5yu04mmc)
+- Adding video and gif support
+- Improving the color effect
+- Aiming for something like [this](https://youtu.be/tDU5yu04mmc)
