@@ -39,10 +39,11 @@ def imgLoader(str):
 
 def imgWriter(img,str,option):
     filename = ""
-    if option == 1:
-        filename = "color_"+str
-    if option == 2:
-        filename = "gray_"+str
+    # if option == 1:
+    #     filename = "color_"+str
+    # if option == 2:
+    #     filename = "gray_"+str
+    filename = str #ask for filename
     cv2.imwrite(filename,img)
     print("saved as " + filename + "\n")
 

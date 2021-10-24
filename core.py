@@ -10,7 +10,7 @@ def lineArt(img,blurKernel = 7):
     result_planes = []
     result_norm_planes = []
     for plane in rgb_planes:
-        dilated_img = cv2.dilate(plane, np.ones((cv2.blur,blurKernel), np.uint8))
+        dilated_img = cv2.dilate(plane, np.ones((blurKernel,blurKernel), np.uint8))
         bg_img = cv2.medianBlur(dilated_img, 21)
         diff_img = 255 - cv2.absdiff(plane, bg_img)
         norm_img = cv2.normalize(diff_img,None, alpha=0, beta=255, norm_type=cv2.NORM_MINMAX, dtype=cv2.CV_8UC1)
@@ -27,3 +27,15 @@ def grayLineArt(img):
     colour_result = lineArt(img)
     hsv = cv2.cvtColor(colour_result,cv2.COLOR_BGR2HSV)
     return cv2.split(hsv)[0]
+
+
+#test func
+# img = cv2.imread("testImg/phos.jpg")
+# if img is not None:
+#     cv2.imshow("image",img)
+#     cv2.waitKey(0)
+#     cv2.destroyAllWindows()
+
+# cv2.imshow("image",lineArt(img,7))
+# cv2.waitKey(0)
+# cv2.destroyAllWindows()
