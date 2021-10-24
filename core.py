@@ -18,7 +18,6 @@ def lineArt(img,blurKernel = 7):
         result_norm_planes.append(norm_img)
     #result = cv2.merge(result_planes)
     result_norm = cv2.merge(result_norm_planes)
-    result_norm = cv2.cvtColor(result_norm,cv2.COLOR_BGR2RGB)
     return result_norm
 
 def grayLineArt(img):
@@ -26,4 +25,5 @@ def grayLineArt(img):
     line art but gray
     '''
     colour_result = lineArt(img)
-    return cv2.split(colour_result)[0]
+    hsv = cv2.cvtColor(colour_result,cv2.COLOR_BGR2HSV)
+    return cv2.split(hsv)[0]
