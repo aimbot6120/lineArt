@@ -43,9 +43,9 @@ def imgWriter(img,str,option):
     #     filename = "color_"+str
     # if option == 2:
     #     filename = "gray_"+str
-    filename = str #ask for filename
+    filename = "result.jpg" #ask for filename
     cv2.imwrite(filename,img)
-    print("saved as " + filename + "\n")
+    print("saved as " + filename)
 
 def applyFilter(img,option):
     if option == 1:
