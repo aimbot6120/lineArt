@@ -18,7 +18,7 @@ color (option 1)
 
 ![color result](result/result_color.jpg?raw=true "color result")
 
-color (option 1)
+gray (option 2)
 
 ![gray result](result/result_bw.jpg?raw=true "gray result")
 
