@@ -2,12 +2,14 @@
 A sketch like(?) effect for images
 
 # How to run
+```
 main.py [filename] [option {1,2}]
+```
 
 option 1 retains colour
 option 2 gives gray image
 
-#results
+# results
 original
 
 ![original](testImg/phos.jpg?raw=true "original")
